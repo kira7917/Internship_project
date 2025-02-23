@@ -1,0 +1,185 @@
+/* 🌙 Dark & Creative GitHub Dashboard UI */
+
+:root {
+    --primary-color: #00aaff;  /* Neon Blue */
+    --secondary-color: #ff4f93; /* Vibrant Pink */
+    --background-dark: #121212; /* Dark Background */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --border-radius: 12px;
+    --shadow: 0px 6px 20px rgba(0, 255, 255, 0.2);
+    --text-light: #e0e0e0;
+  }
+  
+  body {
+    background: var(--background-dark);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .dashboard {
+    width: 100em;
+    height: 70em;
+    max-width: 1000px;
+    padding: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    animation: fadeIn 1s ease-in-out;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  
+    /* 🔥 Let it expand dynamically */
+    min-height: 400px;  /* Adjust this if needed */
+    height: auto;  /* Ensures it expands based on content */
+    max-height: none;
+    overflow-y: auto;  /* Enables scrolling if too many repositories */
+  }
+  
+  /* 📂 Fix repository list expansion */
+  .repo-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allows repositories to wrap instead of overflowing */
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .chart-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  /* 🛠 Make individual repositories fit better */
+  .repo-item {
+    flex: 1;
+    min-width: 200px; /* Ensures smaller items don't get squeezed */
+    max-width: 300px;
+  }
+  
+  
+  /* 🏠 Header */
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+  }
+  
+  /* 🔘 Buttons */
+  button {
+    display: block;
+    width: 220px;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 79, 147, 0.4);
+  }
+  
+  button:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.6);
+  }
+  
+
+  
+  .repo-list {
+    width: 35%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+  }
+  
+  .repo-list:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  
+  .repo-item:hover {
+    background: rgba(0, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+  
+  /* 📊 Repository Details */
+  .details-container {
+    width: 65%;
+  }
+  
+  .repo-details {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+  }
+  
+  .repo-details:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* 📌 Section Titles */
+  .section h5 {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* 🔄 Animated Lists */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: rgba(0, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin: 5px 0;
+    transition: all 0.3s;
+    font-size: 14px;
+  }
+  
+  li:hover {
+    background: rgba(255, 79, 147, 0.3);
+    transform: scale(1.05);
+  }
+  
+  /* 🎭 Fade-In Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
